@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointments - MediCloud</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="app"><aside class="sidebar"><div class="brand">🏥 <span>MediCloud</span></div>
+<nav><a href="index.html">📊 Dashboard</a><a href="patients.html">🧑‍🤝‍🧑 Patients</a><a href="doctors.html">👨‍⚕️ Doctors</a><a class="active" href="appointments.html">📅 Appointments</a><a href="medical-records.html">📋 Medical Records</a><a href="billing.html">💳 Billing</a></nav><button class="logout" onclick="logout()">↪ Logout</button></aside>
+<main class="main"><header class="topbar"><div><h1>Appointments</h1><p>Schedule and manage appointments</p></div></header>
+<section class="panel"><div class="panel-head"><h2>Book Appointment</h2></div>
+<form id="appointmentForm" class="form-grid"><select id="patientId" required><option value="">Select Patient</option></select><select id="doctorId" required><option value="">Select Doctor</option></select>
+<input id="date" type="date" required><input id="time" type="time" required>
+<select id="status"><option>Scheduled</option><option>Completed</option><option>Cancelled</option></select>
+<input id="reason" placeholder="Reason"><button class="btn" type="submit">Book Appointment</button></form></section>
+<section class="panel"><div class="panel-head"><h2>Appointment List</h2></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Patient</th><th>Doctor</th><th>Date</th><th>Time</th><th>Reason</th><th>Status</th><th>Action</th></tr></thead><tbody id="appointmentTable"></tbody></table></div></section>
+</main></div><script src="js/script.js"></script><script src="js/appointments.js"></script></body></html>

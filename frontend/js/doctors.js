@@ -1,0 +1,4 @@
+async function loadDoctors(){const d=await api("/doctors");document.getElementById("doctorTable").innerHTML=d.map(x=>`<tr><td>${x.id}</td><td>${x.name}</td><td>${x.specialization}</td><td>${x.phone}</td><td>${x.experience||0} yrs</td><td>₹${Number(x.fee).toLocaleString("en-IN")}</td><td><button class="btn danger small" onclick="deleteDoctor(${x.id})">Delete</button></td></tr>`).join("")||"<tr><td colspan='7'>No doctors found</td></tr>"}
+document.getElementById("doctorForm").addEventListener("submit",async e=>{e.preventDefault();await api("/doctors",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:name.value,specialization:specialization.value,phone:phone.value,experience:experience.value,fee:fee.value})});e.target.reset();loadDoctors()});
+async function deleteDoctor(id){if(confirm("Delete this doctor?")){await api("/doctors/"+id,{method:"DELETE"});loadDoctors()}}
+loadDoctors();

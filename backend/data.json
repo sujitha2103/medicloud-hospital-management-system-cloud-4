@@ -1,0 +1,43 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Arun Kumar",
+      "age": 45,
+      "gender": "Male",
+      "phone": "9876543210",
+      "email": "arun@gmail.com",
+      "disease": "Diabetes"
+    },
+    {
+      "id": 2,
+      "name": "Priya Sharma",
+      "age": 32,
+      "gender": "Female",
+      "phone": "9876501234",
+      "email": "priya@gmail.com",
+      "disease": "Migraine"
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Anitha",
+      "specialization": "Cardiologist",
+      "phone": "9000011111",
+      "experience": 12,
+      "fee": 800
+    },
+    {
+      "id": 2,
+      "name": "Dr. Raj",
+      "specialization": "General Physician",
+      "phone": "9000022222",
+      "experience": 8,
+      "fee": 500
+    }
+  ],
+  "appointments": [],
+  "records": [],
+  "bills": []
+}

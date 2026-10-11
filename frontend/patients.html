@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patients - MediCloud</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="app"><aside class="sidebar"><div class="brand">🏥 <span>MediCloud</span></div>
+<nav><a href="index.html">📊 Dashboard</a><a class="active" href="patients.html">🧑‍🤝‍🧑 Patients</a><a href="doctors.html">👨‍⚕️ Doctors</a><a href="appointments.html">📅 Appointments</a><a href="medical-records.html">📋 Medical Records</a><a href="billing.html">💳 Billing</a></nav><button class="logout" onclick="logout()">↪ Logout</button></aside>
+<main class="main"><header class="topbar"><div><h1>Patients</h1><p>Manage registered patients</p></div></header>
+<section class="panel"><div class="panel-head"><h2>Patient Registration</h2></div>
+<form id="patientForm" class="form-grid">
+<input id="name" placeholder="Full Name" required><input id="age" type="number" placeholder="Age" required>
+<select id="gender" required><option value="">Gender</option><option>Male</option><option>Female</option><option>Other</option></select>
+<input id="phone" placeholder="Phone Number" required><input id="email" type="email" placeholder="Email">
+<input id="disease" placeholder="Disease / Condition"><button class="btn" type="submit">Add Patient</button>
+</form></section>
+<section class="panel"><div class="panel-head"><h2>Patient List</h2><input id="search" class="search" placeholder="Search patients..."></div>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Age</th><th>Gender</th><th>Phone</th><th>Condition</th><th>Action</th></tr></thead><tbody id="patientTable"></tbody></table></div></section>
+</main></div><script src="js/script.js"></script><script src="js/patients.js"></script></body></html>

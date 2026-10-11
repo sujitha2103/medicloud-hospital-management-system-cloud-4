@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediCloud Hospital - Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand">🏥 <span>MediCloud</span></div>
+  <nav>
+    <a class="active" href="index.html">📊 Dashboard</a>
+    <a href="patients.html">🧑‍🤝‍🧑 Patients</a>
+    <a href="doctors.html">👨‍⚕️ Doctors</a>
+    <a href="appointments.html">📅 Appointments</a>
+    <a href="medical-records.html">📋 Medical Records</a>
+    <a href="billing.html">💳 Billing</a>
+  </nav>
+  <button class="logout" onclick="logout()">↪ Logout</button>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div><h1>Hospital Dashboard</h1><p>Welcome to MediCloud Hospital Management System</p></div>
+  <div class="user">👤 <strong id="adminName">Administrator</strong></div>
+</header>
+
+<section class="cards">
+  <div class="card"><div class="icon">🧑‍🤝‍🧑</div><div><span>Total Patients</span><h2 id="patientCount">0</h2></div></div>
+  <div class="card"><div class="icon">👨‍⚕️</div><div><span>Total Doctors</span><h2 id="doctorCount">0</h2></div></div>
+  <div class="card"><div class="icon">📅</div><div><span>Appointments</span><h2 id="appointmentCount">0</h2></div></div>
+  <div class="card"><div class="icon">💰</div><div><span>Total Revenue</span><h2 id="revenue">₹0</h2></div></div>
+</section>
+
+<section class="panel">
+  <div class="panel-head"><h2>Recent Appointments</h2><a class="btn small" href="appointments.html">View All</a></div>
+  <div class="table-wrap">
+  <table><thead><tr><th>Patient</th><th>Doctor</th><th>Date</th><th>Time</th><th>Status</th></tr></thead>
+  <tbody id="recentAppointments"></tbody></table>
+  </div>
+</section>
+</main>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

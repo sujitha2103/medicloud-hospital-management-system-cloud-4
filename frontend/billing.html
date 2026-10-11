@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billing - MediCloud</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="app"><aside class="sidebar"><div class="brand">🏥 <span>MediCloud</span></div>
+<nav><a href="index.html">📊 Dashboard</a><a href="patients.html">🧑‍🤝‍🧑 Patients</a><a href="doctors.html">👨‍⚕️ Doctors</a><a href="appointments.html">📅 Appointments</a><a href="medical-records.html">📋 Medical Records</a><a class="active" href="billing.html">💳 Billing</a></nav><button class="logout" onclick="logout()">↪ Logout</button></aside>
+<main class="main"><header class="topbar"><div><h1>Billing</h1><p>Create and manage patient bills</p></div></header>
+<section class="panel"><div class="panel-head"><h2>Create Bill</h2></div>
+<form id="billForm" class="form-grid"><select id="patientId" required><option value="">Select Patient</option></select>
+<input id="service" placeholder="Service / Description" required><input id="amount" type="number" placeholder="Amount (₹)" required>
+<select id="paymentStatus"><option>Paid</option><option>Pending</option></select><input id="billDate" type="date" required><button class="btn" type="submit">Create Bill</button></form></section>
+<section class="panel"><div class="panel-head"><h2>Billing Records</h2></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Patient</th><th>Service</th><th>Amount</th><th>Status</th><th>Date</th><th>Action</th></tr></thead><tbody id="billTable"></tbody></table></div></section>
+</main></div><script src="js/script.js"></script><script src="js/billing.js"></script></body></html>
